@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Information Form</title>
+    <style>
+        
+        body {
+            font-family: serif;
+            font-size: 18px;
+        }
+        
+        th, td {
+            border: 2px solid #b3b3b3;
+            padding: 6px 10px;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #d1d5ff;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            width: 50%;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        input[type="text"] {
+            border: 1px solid #7a7a7a;
+            padding: 2px;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        textarea {
+            height: 100px;
+            resize: none;
+            border: 1px solid #7a7a7a;
+        }
+        .button-container {
+            text-align: center;
+            padding: 10px;
+        }
+        input[type="submit"] {
+            font-family: inherit;
+            font-size: 16px;
+            padding: 4px 15px;
+            background-color: #efefef;
+            border: 1px solid #767676;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <center>
+
+    <table border="2" width="500px">
+
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+        
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        
+         <tr>
+                    <td>Sex</td>
+                    <td>
+                       
+                        <input type="radio" value="Male" id="Male" name="Male_status">
+                        <label for="Male">Male</label>
+                        <br>
+                     
+                        <input type="radio" value="Female" id="Male" name="Male_status">
+                        <label>Female</label>
+                    </td>
+                </tr>
+        
+        <tr>
+            <td>Eye color</td>
+            <td>
+                <select name="eyecolor">
+                    <option>Red</option>
+                    <option>black</option>
+                    <option>White</option>
+                </select>
+            </td>
+        </tr>
+        
+        <tr>
+                    <td>Check all that apply</td>
+                    <td>
+                        <input type="checkbox" value="over1" id="f1" name="over">
+                        <label for="f1"> Over 6 feet tall</label>
+                        <br>
+                        <input type="checkbox" value="over2" id="f2" name="over">
+                        <label for="f2"> Over 200 pounds</label>
+                    </td>
+                </tr>
+        
+        <tr>
+            <td colspan="2">
+                <label for="ability" style="display:block; margin-bottom: 5px;">Describe your athletic ability:</label>
+                <textarea id="ability" name="ability"></textarea>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" class="button-container">
+                <input type="submit" value="Enter my information">
+            </td>
+        </tr>
+    </table>
+    </center>
+</form>
+
+</body>
+</html>
